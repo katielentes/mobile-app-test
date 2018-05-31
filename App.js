@@ -1,5 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, initialRoute, NavigatorIOS, requireNativeComponent } from 'react-native';
+import NavigatorIOSApp from "./Components/Nav.js";
+import { View } from 'react-native';
+
+
 
 export default class App extends React.Component {
   render() {
@@ -8,6 +12,8 @@ export default class App extends React.Component {
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
+        <NavigatorIOSApp />
+
       </View>
     );
   }
@@ -16,8 +22,9 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'column',
+    backgroundColor: '#F7F9FB',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
 });
